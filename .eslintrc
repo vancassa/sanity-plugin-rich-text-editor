@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "extends": [
+    "sanity",
+    "sanity/typescript",
+    "sanity/react",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/display-name": "off",
+    "no-use-before-define": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-console": "off",
+    "no-shadow": "off",
+    "react/jsx-no-bind": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "default-case": "off",
+    "consistent-return": "off",
+    "radix": "off",
+  }
+}
