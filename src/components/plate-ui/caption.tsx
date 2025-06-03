@@ -26,7 +26,7 @@ const captionVariants = cva('max-w-full', {
 
 export const Caption = withVariants(CaptionPrimitive, captionVariants, ['align'])
 
-export const CaptionTextarea: React.FC = withCn(
+export const CaptionTextarea: React.FC<any> = withCn(
   CaptionTextareaPrimitive,
   cn(
     'mt-2 w-full resize-none border-none bg-inherit p-0 font-[inherit] text-inherit',
@@ -35,7 +35,7 @@ export const CaptionTextarea: React.FC = withCn(
   ),
 )
 
-export const CaptionButton: React.FC = createPrimitiveComponent(Button)({
+export const CaptionButton: React.FC<any> = createPrimitiveComponent(Button)({
   propsHook: useCaptionButton,
   stateHook: useCaptionButtonState,
 })
