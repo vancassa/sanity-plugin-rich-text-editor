@@ -4,8 +4,21 @@
 
 ## Installation
 
-```sh
-npm install sanity-plugin-rich-text-editor
+Reference: https://www.sanity.io/docs/studio/developing-plugins
+
+Build the plugin
+```
+pnpm build
+```
+
+In this directory, run
+```
+pnpm link-watch
+```
+
+In your project directory, run:
+```
+npx yalc add sanity-plugin-rich-text-editor && npx yalc link sanity-plugin-rich-text-editor && pnpm install
 ```
 
 ## Usage
@@ -14,12 +27,23 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from 'sanity-plugin-rich-text-editor'
+import {richTextEditorPlugin} from 'sanity-plugin-rich-text-editor'
 
 export default defineConfig({
   //...
-  plugins: [myPlugin({})],
+  plugins: [
+    richTextEditorPlugin()
+  ],
 })
+```
+
+Use the type in your field:
+```ts
+defineField({
+  name: 'richContent',
+  title: 'Content',
+  type: 'richTextHtmlContent',
+}),
 ```
 
 ## License
