@@ -46,6 +46,21 @@ defineField({
 }),
 ```
 
+Render in React:
+```tsx
+export default function SamplePage({ block }) {
+  const { richContent } = block;
+
+  return (
+      <div className="container">
+        <div
+          dangerouslySetInnerHTML={{ __html: richContent?.[0]?.children?.[0]?.html }}
+        />
+      </div>
+  );
+}
+```
+
 ## License
 
 [MIT](LICENSE) © Vanessa Cassandra
